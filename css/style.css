@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f6f9;
+    overflow: hidden;
+}
+
+.list {
+    width: 480px;
+}
+
+.list .list-item {
+    margin: 30px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list .list-content {
+    display: flex;
+    width: 100%;
+    z-index: 1;
+    padding: 16px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .04);
+}
+
+.list .list-content .profile {
+    width: 25%;
+    pointer-events: none;
+}
+
+.list .list-content .caption {
+    width: 75%;
+    padding-left: 6px;
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    pointer-events: none;
+}
+
+.list .list-content img {
+    width: 100px;
+    height: 100px;
+}
+
+.list .list-content h3 {
+    color: #2c3e50;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.list .list-content p {
+    color: #3c5165;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: -45px;
+}
+
+.list button {
+    cursor: pointer;
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 18px;
+    transition: .2s ease-out;
+}
+
+.list button .list-icon {
+    width: 100px;
+    font-size: 30px;
+}
+
+.list .settings {
+    left: 10px;
+    color: #010101;
+    background: #e7eaed;
+    justify-content: flex-start;
+}
+
+.list .delete {
+    right: 10px;
+    color: #fff;
+    background: #ec395e;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+
+    .list button .list-icon {
+        width: 65px;
+        font-size: 28px;
+    }
+
+    .list .list-item:hover .settings {
+        transform: translateX(-70px);
+    }
+
+    .list .list-item:hover .delete {
+        transform: translateX(70px);
+    }
+
+}
